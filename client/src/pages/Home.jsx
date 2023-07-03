@@ -83,8 +83,18 @@ const Home = () => {
 
 			<div className="mt-10">
 				{loading ? (
-					<div className="flex justify-center items-center">
+					<div className="flex flex-col justify-center items-center">
 						<Loader />
+						<div className="mt-10">
+							<p className="text-[#666e75] max-w-[600px]">
+								<span className="text-[#df6767] font-extrabold">Please note:</span> Render, the
+								service used for the server deployment of this application, automatically disconnect
+								after 15 minutes of inactivity. This causes a delay in the response time of the
+								first request (which is what's currently happening right now!) Please give it a
+								minute while it tries to reconnect. <br /> Thanks for being patient and cool about
+								it :)
+							</p>
+						</div>
 					</div>
 				) : (
 					<>
